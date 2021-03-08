@@ -1,4 +1,4 @@
-module github.com/kellegous/go
+module github.com/myyang/go
 
 go 1.13
 
