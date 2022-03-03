@@ -44,3 +44,13 @@ func isGenerated(name string) bool {
 func isBannedName(name string) bool {
 	return bannedNames[name]
 }
+
+// parseSubPath excepts short name part
+func parseSubPath(base, path string) string {
+	t := path[len(base):]
+	ix := strings.Index(t, "/")
+	if ix == -1 {
+		return ""
+	}
+	return t[ix:]
+}

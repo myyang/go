@@ -66,7 +66,7 @@ func getDefault(backend backend.Backend, w http.ResponseWriter, r *http.Request)
 	}
 
 	http.Redirect(w, r,
-		rt.URL,
+		mergePathOrQueryString(p, rt.URL, r),
 		http.StatusTemporaryRedirect)
 
 }
